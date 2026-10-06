@@ -14,7 +14,26 @@
     <img id="sphericaltreeleaves-base" src="assets\Stylized_Leaves_002_basecolor.jpg">
     <img id="sphericaltreeleaves-ambient-occlusion" src="assets\Stylized_Leaves_002_ambientOcclu sion.jpg">
     <img id="sphericaltreeleaves-normal" src="assets\Stylized_Leaves_002_normal.jpg">
+    <img id="sky" src="assets\sky.jpg">
+    <a-asset-item
+    id="chair"
+    src="assets\chair.glb">
+  </a-asset-item>
+  <a-asset-item
+  id="Lamp"
+  src="assets\Lamp.glb">
+</a-asset-item>
     </a-assets>
+    <a-entity gltf-model="#chair"
+    position="-1.0 0 -10"
+    rotation="0 45 0"
+    scale="1.5 1.5 1.5">
+  </a-entity>
+  <a-entity
+  gltf-model="#Lamp"
+  position="1.0 0 -10"
+  scale="2 2 2">
+</a-entity>
             <a-plane 
         material= "src: #grass-base; 
         repeat: 500 500; 
@@ -29,7 +48,7 @@
         >
              </a-plane>
               <a-sky 
-              color="lightskyblue" 
+              Src="#sky"
               > 
               </a-sky>             
             <a-mixin
